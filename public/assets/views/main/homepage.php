@@ -1,23 +1,3 @@
-<?php
-
-if(isset($_POST['submit'])){
-
-   $name = mysqli_real_escape_string($conn, $_POST['name']);
-   $email = mysqli_real_escape_string($conn, $_POST['email']);
-   $number = $_POST['number'];
-   $date = $_POST['date'];
-
-   $insert = mysqli_query($conn, "INSERT INTO `appointments`(name, email, number, date) VALUES('$name','$email','$number','$date')") or die('query failed');
-
-   if($insert){
-      $message[] = 'appointment made successfully!';
-   }else{
-      $message[] = 'appointment failed';
-   }
-
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,6 +11,10 @@ if(isset($_POST['submit'])){
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="assets/styles/style.css">
+
+    <!-- jquery tag -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 
 </head>
 <body>
@@ -376,8 +360,8 @@ if(isset($_POST['submit'])){
         <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
         <?php
             if(isset($message)) {
-                foreach($message as $message) {
-                echo'<p class ="message">'.$message.'</p>';
+                foreach($appointments as $appointments) {
+                echo'<p class ="appointments">'.$appointments.'</p>';
             }
             }
         ?>
@@ -520,9 +504,6 @@ if(isset($_POST['submit'])){
 
 <!-- js file link  -->
 <script src="js/script.js"></script>
-
-<!-- jquery tag -->
-<script> </script>
 
 </body>
 </html>
