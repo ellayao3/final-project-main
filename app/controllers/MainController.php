@@ -3,6 +3,8 @@
 namespace app\controllers;
 
 use app\core\Controller;
+use app\models\Appointments;
+use app\models\Reviews;
 
 class MainController extends Controller
 {
@@ -13,6 +15,17 @@ class MainController extends Controller
 //        $this->view('../public/assets/views/main/example-homepage.php', true);
     }
 
+    public function Appointments()
+    {
+        include  '../public/assets/views/main/homepage.php';
+    }
+
+    public function Reviews()
+    {
+        include  '../public/assets/views/main/homepage.php';
+    }
+
+    
     public function notFound()
     {
     }
