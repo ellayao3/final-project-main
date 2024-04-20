@@ -5,10 +5,10 @@ use app\models\Appointments;
 
 class AppointmentsController 
 {
-    public function getExperience() {
-        $appointmentsModel = new Experience();
+    public function addAppointments() {
+        $appointmentsModel = new Appointments();
         header("Content-Type: application/json");
-        $appointments = $appointmentseModel->getAllAppointments(); 
+        $appointments = $appointmentsModel->addAppointments(); 
         echo json_encode($appointments);
         exit();
     }    

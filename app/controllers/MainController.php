@@ -11,11 +11,11 @@ class MainController extends Controller
 
     public function homepage()
     {
-                include '../public/assets/views/main/homepage.php';
+        include '../public/assets/views/main/homepage.php';
 //        $this->view('../public/assets/views/main/example-homepage.php', true);
     }
 
-    public function Appointments()
+    public function addAppointments()
     {
         include  '../public/assets/views/main/homepage.php';
     }
@@ -25,7 +25,7 @@ class MainController extends Controller
         include  '../public/assets/views/main/homepage.php';
     }
 
-    
+
     public function notFound()
     {
     }

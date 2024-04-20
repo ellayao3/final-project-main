@@ -22,7 +22,7 @@ $routes = [
 
     'appointments' => [
         'controller' => AppointmentsController::class,
-        'POST' => 'postAppointments',
+        'POST' => 'addAppointments',
     ]
 
 ];
