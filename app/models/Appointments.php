@@ -10,7 +10,7 @@ class Appointments
 
     protected $table = 'appointments';
 
-    public function addAppointment()
+    public function addAppointments()
     {
         $query = "INSERT INTO appointments (name, number, email, date) VALUES (:name, :number, :email, :date)";
         return $this->queryWithParams($query, $inputData);
