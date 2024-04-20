@@ -2,6 +2,8 @@
 
 namespace app\core;
 
+use PDO;
+
 Trait Database
 {
 
